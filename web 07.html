@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>07</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		li{
+			list-style-type:none;
+		}
+		a{
+			text-decoration: none;
+			color:#000;
+		}
+		.top{
+			height:30px;
+			background-color: #f4f4f4;			
+		}
+		.top span{
+			position:absolute;
+			top:5px;
+			left:80px;
+			font-size: 11px;
+		}
+		.top img{
+			position:absolute;
+			top:-5px;
+			border:1px solid #f4f4f4;
+			height:25px;
+			width:25px;
+		}	
+		#erweima{
+			position: absolute;
+			font-size: 11px;
+			left:1030px;
+			top:4px;
+		}
+		.top div p{
+			position: absolute;
+			font-size: 11px;
+			left:1090px;
+			top:4px;
+		}
+		#login{
+			position: absolute;
+			font-size: 11px;
+			left:1190px;
+			top:4px;
+		}
+		#registe{
+			position: absolute;
+			font-size: 11px;
+			left:1235px;
+			top:4px;
+		}
+
+
+		.sousuo {
+			height:80px;
+			background-color: white;
+		}
+		.sousuo img{
+			border:1px solid white;
+			height:100px;
+			width:230px;
+			position: absolute;
+			top:40px;
+			left:60px;
+		}
+		.sou{
+			/*background-color: #f83838;*/
+			border:2px solid #f83838;
+			height:40px;
+			width:500px;
+			position: absolute;
+			top:60px;
+			left:450px;
+		}		
+		.sou div{
+			border:1px solid #f83838;
+			width:80px;
+			height:40px;
+			position:absolute;
+			top:0px;
+			left:420px;
+			background-color: #f83838;
+		}
+		.sou span{
+			color:white;
+			position: absolute;
+			top:3px;
+			left:20px;
+
+			font-size: 20px;
+			font-weight: bold;
+		}
+		#shuru{
+			border:1px solid #f83838;
+			height:40px;
+			width:420px;
+			position: absolute;
+			top:-2px;
+			left:-422px;
+			color:#ccc;
+			font-size: 15px;
+		}
+		#gouwu{
+			border:1px solid #e3e3e3;
+			background-color: #f5f5f5;
+			width:140px;
+			height:35px;
+			position:absolute;
+			top:60px;
+			left:1100px;
+		}
+		#gouwu img{
+			border:1px solid #f5f5f5;
+			width:30px;
+			height:30px;
+			position: absolute;
+			top:0px;
+			left:0px;
+		}
+		#gouwu span{
+			position:absolute;
+			top:7px;
+			left:35px;
+		}
+		#gouwu span span{
+			color:#f83838;
+			position: absolute;
+			left:62px;
+			top:0px;
+		}
+
+
+		#navagition{
+			height:50px;
+			/*background-color: white;*/
+		}
+		#navagition li{
+			display:inline-block;
+			margin-right:50px;
+			border:1px solid white;
+			background-color: white;
+			height:40px;
+			width:80px;
+			line-height: 40px;			
+			text-align: center;
+		}
+		#navagition a{
+			font-size: 16px;
+		}
+		#navagition ul{
+			position: absolute;
+			top:150px;
+			left:120px;
+		}
+		/*#navagition li:link.a{
+			color:#000;
+		}
+		#navagition li:visited.a{
+			color:#fff;
+			font-weight:bold;
+		}*/
+		/*#navagition li:link{
+			
+		}
+		#navagition li:visited{
+			border-radius:10%;
+			border:1px solid #f83838;
+			background-color:#f83838;
+			height:40px;
+			width:80px;
+		}*/
+		#navagition li:hover{
+			border-radius:10%;
+			border:1px solid #f83838;
+			background-color:#f83838;
+			height:40px;
+			width:80px;
+		}
+		#navagition li:active{
+			border-radius:10%;
+			border:1px solid #f83838;
+			background-color:#f83838;
+			height:40px;
+			width:80px;
+		}
+
+		#navagition li:hover a{
+			color:#fff;
+			
+		}
+		#navagition li:active a{
+			color:#fff;
+			
+		}
+
+		#fenge{
+			height:3px;		
+			background-color: #f83838;
+			margin-top:90px; 
+		}
+
+
+		#content{
+			margin-top: -45px;
+			background-color: #fbfbfb;
+			height:800px;
+		}
+		#crumb{
+			position:absolute;
+			top:230px;
+			left:80px;			
+		}
+		#fenlei{
+			border:1px solid #fff;
+			background-color: #fff;
+			height:30px;
+			width:250px;
+			position: absolute;
+			top:270px;
+			left:80px;
+		}
+		#fenlei img{
+			position:absolute;
+			top:0px;
+			left:55px;
+			height:30px;
+			line-height: 30px;
+		}
+		#fenlei p{
+			position:absolute;
+			left:110px;
+			top:3px;
+		}
+		.fenlei1{
+			border: 1px solid white;
+			height:500px;
+			width:250px;
+			background-color: #fff;
+			position:absolute;
+			top:320px;
+			left:80px;
+		}
+		.fenlei1 a:link{
+			color:#000;
+		}
+		.fenlei1 a:visited{
+			color:#f83838;
+		}
+		.fenlei1 a:hover{
+			color:#000;
+
+		}.fenlei1 a:active{
+			color:#f83838;
+		}
+
+		#one{
+			position:absolute;
+			top:20px;
+			left:110px;
+			color:black;
+		}
+		#two{
+			position: absolute;
+			top:70px;
+			left:110px;
+			color:black;
+		}
+
+		#one:hover{
+			color:#ff2c18;
+		}
+
+		/*#one:link{
+			
+		}
+		#one:visited{
+			color:#ff2c18;
+		}
+		#one:hover{
+			color:#ff2c18;
+		}
+		#one:active{
+			color:#ff2c18;
+		}
+		
+		#two:link{
+
+		}
+		#two:visited{
+			color:#ff2c18;
+		}
+		#two:hover{
+			color:#ff2c18;
+		}
+		#two:active{
+			color:#ff2c18;
+		}*/
+		
+		#shangpin{
+			border:1px solid #fff;
+			background-color: #fff;
+			height: 550px;
+			width:900px;
+			position:absolute;
+			left:350px;
+			top:270px;
+		}
+		#shangpin li{
+			border:1px solid #dbdbdb;
+			width:190px;
+			height:250px;
+			display: inline-block;
+			margin-left: 25px;
+			margin-top: 15px;
+		}
+		#shangpin li img{
+			border:1px solid #fff;
+			height:160px;
+			width:150px;
+			padding-left: 20px;
+		}
+		#shangpin li span p{
+			color:#b8b8b8;
+			margin-left: 45px;
+			margin-top: 5px;
+		}
+		#shangpin li p{
+			color:#333333;
+			margin-left: 65px;
+			margin-top: 10px;
+		}
+
+		#bottom{
+			margin-top: -140px;
+			border:1px solid #2e2e2e;
+			background-color: #2e2e2e;
+			height:350px;
+		}
+		table {			
+			margin-left: 50px;
+			margin-top: 30px;
+			border:1px solid #2e2e2e;
+			border-color: #2e2e2e #2e2e2e white #2e2e2e;
+		}
+		table th{	
+			border:1px solid #2e2e2e;
+			width:200px;
+			height:30px;
+			padding-left:0px;
+			color:#ebebeb;
+			font-weight: normal;
+			font-size: 14px;
+		}
+		table td{
+		border:1px solid #2e2e2e;
+			width:200px;
+			height:30px;			
+			padding-left: 95px;
+			padding-top: 20px;
+		}
+		table td a{
+			color:#ebebeb;
+			font-size: 14px;
+		}
+		#hhh{
+			position: absolute;
+			top:1150px;
+			left:450px;
+			color:#848484;
+			font-size: 10px;
+		}
+		#hhh a{
+			color:#848484;
+			font-size: 10px;
+		}
+		#jjj{
+			position: absolute;
+			top:1170px;
+			left:430px;
+			color:#848484;
+			font-size: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+	<div class="top">	
+		<span><p>我的收藏 &nbsp; &nbsp;E族之家手机版&nbsp;&nbsp;<img src="photo/qq.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3328203328</p></span>
+		<div>			
+			<a href="#" id="erweima">扫描加入</a>
+			<p>欢迎来到E族之家，</p>
+			<a href="#" id="login">请登录|</a>
+			<a href="#" id="registe">注册</a>			
+		</div>
+	</div>
+
+	<div class="sousuo">
+		<img src="photo/logo.png">
+		<div class="sou"><div><input id="shuru" type="text" name="sousuo" value="&nbsp;&nbsp;&nbsp;&nbsp;请输入关键词！"></div> <div><a href="#"><span><!-- <input type="submit" name="sousuo" > -->搜索</span></a></div></div>
+		<div id="gouwu"><img src="photo/gouwuche.png"><span>购物车（&nbsp;<span>0</span>）件</span></div>		
+	</div>
+
+	<div id="navagition">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">E族生活</a></li>
+			<li><a href="#">E族服务</a></li>
+			<li><a href="#">E族爱心</a></li>			
+		</ul>
+		<div id="fenge"></div>
+	</div>
+
+	<div id="content">
+		<div id="crumb">
+			当前位置：<a href="#">E族爱心</a>><a href="#">食品</a>
+		</div>
+		<div id="fenlei">
+			<img src="photo/mulu.png"><p>全部分类</p>
+		</div>
+		<div class="fenlei1">
+			<a id="one" href="#">>食品</a>
+			<a id="two" href="#">>生活用品</a>
+		</div>
+
+		<div id="shangpin">
+			<ul>
+				<li><img src="photo/lajiao.png"><span><p>精品辣椒100g</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/baixiangguo.png"><span><p>特级百香果3斤</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/pijiu.png"><span><p>万威啤酒500ml</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/dou.png"><span><p>万威啤酒500ml</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/lajiao.png"><span><p>精品辣椒100g</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/baixiangguo.png"><span><p>特级百香果3斤</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/pijiu.png"><span><p>万威啤酒500ml</p></span><p>￥&nbsp;90.00</p></li>
+				<li><img src="photo/dou.png"><span><p>万威啤酒500ml</p></span><p>￥&nbsp;90.00</p></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="bottom">
+		<table>
+			<tr>
+				<th>新手上路</th>
+				<th>配送方式</th>
+				<th>购物指南</th>
+				<th>售后服务</th>
+				<th>关于我们</th>
+			</tr>
+			<tr>
+				<td><a href="#">售后流程</a></td>
+				<td><a href="#">货到付款区域</a></td>
+				<td><a href="#">常见问题</a></td>
+				<td><a href="#">退换货原则</a></td>
+				<td><a href="#">网站故障报告</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">购物流程</a></td>
+				<td><a href="#">配送支付查询</a></td>
+				<td><a href="#">订购流程</a></td>
+				<td><a href="#">售后服务保证</a></td>
+				<td><a href="#">联系我们</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">订购方式</a></td>
+				<td><a href="#">支付方式说明</a></td>
+				<td><a href="#">注册新会员</a></td>
+				<td><a href="#">换货流程</a></td>
+				<td><a href="#">投诉与建议</a></td>
+			</tr>
+			<div id="ooo"></div>
+		</table>
+	</div>
+	<div>
+		<p id="hhh"><a href="#">E族生活</a> &nbsp;| &nbsp;<a href="#">居家维修保养</a>&nbsp;|&nbsp;<a href="#">住宿优惠信息</a>&nbsp;|&nbsp;<a href="#">出行接送</a>&nbsp;|&nbsp;<a href="#">E族活动</a>&nbsp;|&nbsp;<a href="#">E族爱心</a>&nbsp;|&nbsp;<a href="#">积分商城</a></p>
+		<p id="jjj">2017-2018 &nbsp;E族之家&nbsp; 版权所有，并保留所有权限。ICP备案证书号：粤ICP备17127392号</p>
+	</div>
+	</form>
+</body>
+</html>
